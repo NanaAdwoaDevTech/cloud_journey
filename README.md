@@ -1,2 +1,2 @@
-# cloud_journey
-My Notes on learning Cloud Computing
+# Cloud Journey
+My notes on learning Cloud Computing
