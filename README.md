@@ -9,3 +9,5 @@ Learning IaC from Terraform, I now understand what they mean by Declarative.
 With code, it's imperative, meanining we are instructing it to get a result. Here, in declarative, you just give it the result you want. i.e. instead of wanting 5 EC2 servers from already having 2 deployed by saying 'Add 3 more EC2 servers', we just say, 'Deploy 5 EC2 servers.' With IaC, it overrides everything (the 2 EC2 already in operation), and you get 5 EC2 servers.
 
 Finished the Learn to Code 18 Linux CTF. A good refresher on Linux commands. Onwards!
+<img width="967" height="975" alt="awww" src="https://github.com/user-attachments/assets/8fe153d7-8f77-460e-9d0c-e832355ad436" />
+
