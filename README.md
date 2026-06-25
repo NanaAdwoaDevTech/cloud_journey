@@ -12,3 +12,11 @@ Finished the Learn to Code 18 Linux CTF. A good refresher on Linux commands. Onw
 
 <img width="967" height="975" alt="awww" src="https://github.com/user-attachments/assets/8fe153d7-8f77-460e-9d0c-e832355ad436" />
 
+Finished 4 tickets on the AWS cloud!
+I have learnt the inner workings of CloudWatch alarms on error rates, synthetic checks that ping external endpoints every minute and alert if they fail.
+I have also learnt how to troubleshoot and connect all Networking basics in a 3-tier VPC.
+I lastly learnt how to use subnets checkers, terraform and bash scripts automation to ensure correct networks and allow only the proper security groups or singular IPs.
+
+<img width="1032" height="765" alt="image" src="https://github.com/user-attachments/assets/1f9089c6-b916-4135-bcd2-e83fc75dc4e8" />
+
+
