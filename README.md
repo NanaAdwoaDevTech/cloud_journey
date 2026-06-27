@@ -19,4 +19,6 @@ I lastly learnt how to use subnets checkers, terraform and bash scripts automati
 
 <img width="1032" height="765" alt="image" src="https://github.com/user-attachments/assets/1f9089c6-b916-4135-bcd2-e83fc75dc4e8" />
 
+Now to run an n8n server to test out some automations using Elastic IPs. Woah!
+
 
