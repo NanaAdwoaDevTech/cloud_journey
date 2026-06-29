@@ -21,4 +21,8 @@ I lastly learnt how to use subnets checkers, terraform and bash scripts automati
 
 Now to run an n8n server to test out some automations using Elastic IPs. Woah!
 
+Just came across my first pseudo-optimization!
+So, running multiple n8n workflows on a 1GB RAM t3.micro was something I did not know was a strecth on resources. Lesson well learnt as I had to check using docker ps to compare container uptimes and to see I had only ~118MB of free room to begin with! n8n's process choked, crashed, and Docker automatically restarted it (that's what "restart: always" in the compose file does). But since the memory pressure never actually went away, it crashed again. And again. That's the loop I saw in the logs = "Initializing → ready → crashed → Initializing → ready → crashed," over and over and over and over and you get it.
+The fix: adding a 2GB swap file. It'll give n8n the headroom to survive memory spikes without crashing. But a swap is a bandage, not a permanent cure.
+
 
