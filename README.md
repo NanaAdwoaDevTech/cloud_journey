@@ -26,4 +26,29 @@ Just came across my first pseudo-optimization!
 So, running multiple n8n workflows on a 1GB RAM t3.micro was something I did not know was a strecth on resources. Lesson well learnt as I had to check using docker ps to compare container uptimes and to see I had only ~118MB of free room to begin with! n8n's process choked, crashed, and Docker automatically restarted it (that's what "restart: always" in the compose file does). But since the memory pressure never actually went away, it crashed again. And again. That's the loop I saw in the logs = "Initializing → ready → crashed → Initializing → ready → crashed," over and over and over and over and you get it.
 The fix: adding a 2GB swap file. It'll give n8n the headroom to survive memory spikes without crashing. But a swap is a bandage, not a permanent cure.
 
+2 things I hate: wasting money and being unsafe. 
+I was unsafe: I got my accessKeys leaked. 
+A good lesson on how to remove IAM access and quickly before a hacker drained my credits:
+:~$ aws s3 ls
+2026-06-30 15:05:23 nana-iam-test-1782826819
+:~$ aws s3 ls s3://nana-iam-test-1782826819 --recursive
+2026-06-30 15:05:43         54 test-file.txt
+:~$ aws s3api get-bucket-policy --bucket nana-iam-test-1782826819 2>&1
+
+An error occurred (NoSuchBucketPolicy) when calling the GetBucketPolicy operation: The bucket policy does not exist
+:~$ aws s3api get-public-access-block --bucket nana-iam-test-1782826819 2>&1
+{
+    "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+    }
+}
+:~$ aws s3 rm s3://nana-iam-test-1782826819 --recursive
+aws s3 rb s3://nana-iam-test-1782826819
+delete: s3://nana-iam-test-1782826819/test-file.txt
+remove_bucket: nana-iam-test-1782826819
+:~$
+Lesson learnt!
 
