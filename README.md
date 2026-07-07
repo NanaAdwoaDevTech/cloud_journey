@@ -34,14 +34,17 @@ The fix: adding a 2GB swap file. It'll give n8n the headroom to survive memory s
 2 things I hate: wasting money and being unsafe. 
 I was unsafe: I got my accessKeys leaked. 
 A good lesson on how to remove IAM access and quickly before a hacker drained my credits:
+```bash
 :~$ aws s3 ls
 2026-06-30 15:05:23 nana-iam-test-1782826819
 :~$ aws s3 ls s3://nana-iam-test-1782826819 --recursive
 2026-06-30 15:05:43         54 test-file.txt
 :~$ aws s3api get-bucket-policy --bucket nana-iam-test-1782826819 2>&1
+```
 
 
 An error occurred (NoSuchBucketPolicy) when calling the GetBucketPolicy operation: The bucket policy does not exist
+```bash
 :~$ aws s3api get-public-access-block --bucket nana-iam-test-1782826819 2>&1
 {
     "PublicAccessBlockConfiguration": {
@@ -56,6 +59,7 @@ aws s3 rb s3://nana-iam-test-1782826819
 delete: s3://nana-iam-test-1782826819/test-file.txt
 remove_bucket: nana-iam-test-1782826819
 :~$
+```
 Lesson learnt!
 
 I am putting off journal api for now to go through Ghana's OneMillionCoders' course on cloud practitioner. This is so helpful, because yes, I will admit, I didn't know what an S3 bucket really was. Now, I know forever. I just finished the Learn To Cloud section of making a bucket, adding IAM users and special accesses and deleting everything.
