@@ -58,3 +58,4 @@ remove_bucket: nana-iam-test-1782826819
 :~$
 Lesson learnt!
 
+I am putting off journal api for now to go through Ghana's OneMillionCoders' course on cloud practitioner. This is so helpful, because yes, I will admit, I didn't know what an S3 bucket really was. Now, I know forever. I just finished the Learn To Cloud section of making a bucket, adding IAM users and special accesses and deleting everything.
