@@ -63,3 +63,9 @@ remove_bucket: nana-iam-test-1782826819
 Lesson learnt!
 
 I am putting off journal api for now to go through Ghana's OneMillionCoders' course on cloud practitioner. This is so helpful, because yes, I will admit, I didn't know what an S3 bucket really was. Now, I know forever. I just finished the Learn To Cloud section of making a bucket, adding IAM users and special accesses and deleting everything.
+
+
+
+Just wrapped up the creation of the Python, FastAPI and PostgreSQL capstone project I will be working on going forward: a journal API with full CRUD endpoints, Pydantic input validation, structured logging and an OpenAI SDK AI-powered analyzer. I had also gotten an early start on using some GitHub Actions.
+I especially like the AI addition, not just because I love AI, but that we are getting the most requested skills in real time instead of material from years ago. AI integration didn't even exist roughly two years ago, and now we have it in almost everything! I also debugged devcontainer failures, git commit workflows and static type checked with Pyright. All 50 tests passing with flying green colours! Gwyneth Peña-Siguenza, your vast knowledge on what an engineer needs to know tomorrow truly shines through and I hope other fellow members are enjoying the course just as much as me.
+I will still need to learn more on Pyright/mypy to make more quality, maintainable code. Also, because my laptop is currently full with university projects, I will be learning the cloud on the cloud. Thank you Github Codespaces! I will redo this whole course until everything becomes second nature.
