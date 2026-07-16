@@ -71,7 +71,7 @@ I especially like the AI addition, not just because I love AI, but that we are g
 I will still need to learn more on Pyright/mypy to make more quality, maintainable code. Also, because my laptop is currently full with university projects, I will be learning the cloud on the cloud. Thank you Github Codespaces! I will redo this whole course until everything becomes second nature.
 
 
-While learning AWS CloudFormation and Elastic Beanstalk for an n8n automation project, I hit a classic cloud challenge: how do you prevent AWS from automatically deleting your live server and wiping out your data during updates?
+While learning AWS CloudFormation and Elastic Beanstalk for my n8n automation project, I hit a classic cloud challenge: how do you prevent AWS from automatically deleting your live server and wiping out your data during updates?
 Instead of just turning on basic deletion locks, I decided to practice true cloud engineering principles:
 1. Decoupled State: Separated the OS from the application data using independent Amazon EBS Volumes.
 2. Automated Recovery: Configured the infrastructure so that if Elastic Beanstalk terminates the EC2 instance, a fresh replacement instantly provisions, attaches the persistent data volume, and resumes workflows.
